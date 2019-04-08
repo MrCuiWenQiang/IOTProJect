@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <string name="device_me">个人设备</string>
+    <string name="device_he">他人设备</string>
+    <string name="inffo">正向动作:当主设备打开时，被控设备被打开,主控设备关闭时,被控设备关闭;</string>
+
+</resources>

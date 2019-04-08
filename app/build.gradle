@@ -1,0 +1,89 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.iot.manager"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "V1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        externalNativeBuild {
+            cmake {
+                arguments "-DANDROID_TOOLCHAIN=clang", "-DANDROID_PLATFORM=android-21"
+                cppFlags "-std=c++11 -frtti -fexceptions"
+            }
+        }
+        ndk {
+            abiFilters "armeabi"
+        }
+    }
+
+    signingConfigs {
+        release {
+            storeFile file('G:\\money\\IOTProJect\\iot.jks')
+            storePassword '123456'
+            keyAlias 'iot'
+            keyPassword '123456'
+            v2SigningEnabled false
+        }
+
+        debug {
+            storeFile file('G:\\money\\IOTProJect\\iot.jks')
+            storePassword '123456'
+            keyAlias 'iot'
+            keyPassword '123456'
+            v2SigningEnabled false
+        }
+    }
+
+    buildTypes {
+        debug {
+            debuggable = true
+            jniDebuggable = true
+            minifyEnabled = false
+            zipAlignEnabled = false
+        }
+        release {
+            debuggable = false
+            jniDebuggable = false
+            minifyEnabled = false
+            zipAlignEnabled = true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+
+        // Move the tests to tests/java, tests/res, etc...
+        androidTest.setRoot('tests')
+
+        // Move the build types to build-types/<type>
+        // For instance, build-types/debug/java, build-types/debug/AndroidManifest.xml, ...
+        // This moves them out of them default location under src/<type>/... which would
+        // conflict with src/ being used by the main source set.
+        // Adding new build types or product flavors should be accompanied
+        // by a similar customization.
+        debug.setRoot('build-types/debug')
+        release.setRoot('build-types/release')
+    }
+}
+
+dependencies {
+    implementation fileTree(include: '*.jar', dir: 'libs')
+    //    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:28.+'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    implementation project(':fakerti')
+    implementation('com.github.gzu-liyujiang.AndroidPicker:WheelPicker:latest.release') {
+        exclude group: 'com.android.support'
+    }
+    implementation files('libs/glide-3.6.0.jar')
+}

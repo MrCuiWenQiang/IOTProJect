@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp"
+    android:background="@color/heweather_background">
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="20dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="20dp"
+        >
+        <LinearLayout
+            android:layout_gravity="right"
+            android:gravity="center_vertical"
+            android:background="@drawable/heweather_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/iv_date"
+                android:background="@mipmap/one"
+                style="@style/heweather_date_icon"/>
+            <TextView
+                android:id="@+id/tv_date"
+                style="@style/heweather_date_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="------------" />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="bottom">
+
+            <TextView
+                android:id="@+id/today"
+                style="@style/heweather_today_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="--°" />
+
+            <ImageView
+                style="@style/heweather_top_icon"
+                android:background="@mipmap/topup" />
+
+            <TextView
+                android:id="@+id/tv_toup"
+                style="@style/heweather_top_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="--°" />
+
+            <ImageView
+                style="@style/heweather_top_icon"
+                android:background="@mipmap/topdown" />
+
+            <TextView
+                android:id="@+id/tv_topdown"
+                style="@style/heweather_top_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="--°" />
+
+            <TextView
+                android:id="@+id/tv_tq"
+                style="@style/heweather_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="晴" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <com.qmuiteam.qmui.widget.QMUIRadiusImageView
+                style="@style/heweather_icon"
+                android:background="@mipmap/wind" />
+
+            <TextView
+                android:id="@+id/tv_wind"
+                style="@style/heweather_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="正在获取风级" />
+
+            <com.qmuiteam.qmui.widget.QMUIRadiusImageView
+                style="@style/heweather_icon"
+                android:layout_marginLeft="10dp"
+                android:background="@mipmap/hum" />
+
+            <TextView
+                android:id="@+id/tv_hum"
+                style="@style/heweather_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="正在获取相对湿度" />
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

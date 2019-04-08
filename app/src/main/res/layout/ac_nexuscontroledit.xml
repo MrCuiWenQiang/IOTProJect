@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="10dp"
+    android:orientation="vertical">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/ll_key_value">
+
+            <TextView
+                style="@style/me_layout_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="场景名称:" />
+
+            <EditText
+                android:id="@+id/et_name"
+                style="@style/login_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="请输入场景名称" />
+        </LinearLayout>
+
+        <View style="@style/main_tab_d_view" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/ll_key_value">
+
+            <TextView
+                style="@style/me_layout_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="主控设备:" />
+
+            <TextView
+                android:id="@+id/tv_maindev"
+                style="@style/login_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+
+        <View style="@style/main_tab_d_view" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/ll_key_value">
+
+            <TextView
+                style="@style/me_layout_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="被控设备:" />
+
+            <TextView
+                android:id="@+id/tv_childdev"
+                style="@style/login_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+
+
+        <View style="@style/main_tab_d_view" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/ll_key_value">
+
+            <TextView
+                style="@style/me_layout_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="关联动作:" />
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <RadioButton
+                    android:id="@+id/rb_l"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="正向动作"
+                    android:textColor="#666666" />
+                <RadioButton
+                    android:id="@+id/rb_j"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="反向动作"
+                    android:textColor="#666666" />
+            </RadioGroup>
+
+        </LinearLayout>
+        <View style="@style/main_tab_d_view" />
+        <LinearLayout
+            android:background="#FDF8DF"
+            android:padding="12dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="特别注意:"
+                android:gravity="center"
+                android:textColor="#8B6D3B"
+                android:textSize="16sp"
+                android:drawableLeft="@mipmap/help"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="@string/inffo"
+                android:textColor="#8B6D3B"
+                android:textSize="14sp"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <Button
+            android:id="@+id/bt_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            style="@style/bt_save"
+            android:text="保存"
+            />
+        <Button
+            android:id="@+id/bt_delete"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="22dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            style="@style/bt_delete"
+            android:text="删除"
+            />
+    </LinearLayout>
+</ScrollView>

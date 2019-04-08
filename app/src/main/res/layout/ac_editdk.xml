@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="10dp"
+    android:orientation="vertical">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/ll_key_value">
+
+            <TextView
+                style="@style/me_layout_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="场地名称:" />
+
+            <EditText
+                android:id="@+id/et_name"
+                style="@style/login_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="请输入场地名称" />
+        </LinearLayout>
+
+        <View style="@style/main_tab_d_view" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/ll_key_value">
+
+            <TextView
+                style="@style/me_layout_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="模式:" />
+
+            <TextView
+                android:id="@+id/ed_model"
+                style="@style/login_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+
+        <View style="@style/main_tab_d_view" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/ll_key_value">
+
+            <TextView
+                style="@style/me_layout_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="面积:" />
+
+            <EditText
+                android:id="@+id/et_mj"
+                style="@style/login_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="请输入面积" />
+        </LinearLayout>
+
+        <View style="@style/main_tab_d_view" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/ll_key_value">
+
+            <TextView
+                style="@style/me_layout_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="备注:" />
+
+            <EditText
+                android:id="@+id/et_bz"
+                style="@style/login_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="请输入备注" />
+        </LinearLayout>
+
+        <View style="@style/main_tab_d_view" />
+        <Button
+            android:id="@+id/bt_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            style="@style/bt_save"
+            android:text="保存"
+     />
+        <Button
+            android:id="@+id/bt_delete"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="22dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            style="@style/bt_delete"
+            android:text="删除"
+            />
+    </LinearLayout>
+</ScrollView>

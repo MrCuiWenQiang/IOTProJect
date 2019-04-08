@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="12dp"
+    android:paddingTop="12dp">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/split_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/me_layout_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="意见内容:" />
+
+        <EditText
+            android:id="@+id/et_content"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/et_backage"
+            android:enabled="true"
+            android:inputType="textMultiLine"
+            android:hint="请输入意见"
+            android:gravity="top"
+            android:maxLines="10"
+            android:minLines="8"
+            android:textSize="13sp"
+            android:scrollbars="vertical"/>
+
+        <Button
+            android:id="@+id/bt_tocreate"
+            style="@style/bt_yes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="22dp"
+            android:layout_marginTop="32dp"
+            android:text="提交意见" />
+    </LinearLayout>
+</ScrollView>

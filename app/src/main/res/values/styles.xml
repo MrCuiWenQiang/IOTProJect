@@ -1,0 +1,234 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="@android:style/Theme.Light.NoTitleBar">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+<!-- 复选框 -->
+    <style name="xmfamily_checkbox" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:textColor">@color/demo_title</item>
+        <item name="android:paddingTop">5dip</item>
+        <item name="android:paddingBottom">5dip</item>
+    </style>
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="QMUI.Compat">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="dialog_animation" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/dialog_center_in</item>
+        <item name="android:windowExitAnimation">@anim/dialog_center_out</item>
+    </style>
+    <style name="dialog_translucent" parent="@android:style/Theme.Translucent.NoTitleBar">
+        <item name="android:windowFrame">@null</item><!-- 边框 -->
+        <item name="android:windowIsFloating">true</item><!-- 是否悬浮在activity上 -->
+        <item name="android:windowIsTranslucent">false</item><!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item><!-- 无标题 -->
+        <item name="android:windowBackground">@android:color/transparent</item><!-- 背景透明 -->
+        <item name="android:backgroundDimEnabled">true</item><!-- 模糊 -->
+        <item name="android:windowContentOverlay">@null</item><!-- 对话框是否有遮盖 -->
+        <item name="android:windowAnimationStyle">@style/dialog_animation</item><!-- 弹出或者进入时的动画效果 -->
+        <item name="android:colorBackgroundCacheHint">@null</item><!-- 背景缓存颜色 -->
+    </style>
+
+    <style name="user_info_normal_text">
+        <item name="android:background">#00000000</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">#ff101010</item>
+        <item name="android:textColorHint">#ffe0e0e0</item>
+        <item name="android:textSize">@dimen/font_large</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="XMDialogStyle">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowNoDisplay">false</item>
+    </style>
+    <style name="setup_sub_layout">
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingRight">15dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+    </style>
+    <style name="video_control_button">
+        <item name="android:padding">6dp</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="text_system_info_title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/demo_title</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+    <style name="text_system_info_value">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/theme_color</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:gravity">right|center_vertical</item>
+    </style>
+
+    <style name="login_edit">
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:textColor">@color/addcredit_value</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+    <style name="login_password_edit" parent="login_edit">
+        <item name="android:background">@null</item>
+        <item name="android:password">true</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:digits">1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</item>
+    </style>
+    <style name="main_tab_d_view">
+        <item name="android:background">@color/d_rule</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+    </style>
+    <style name="main_tab_v_view">
+        <item name="android:background">@color/d_rule</item>
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+    <style name="heweather_today_text">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">45sp</item>
+    </style>
+
+    <style name="heweather_top_text">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="heweather_top_icon">
+        <item name="android:layout_width">20dp</item>
+        <item name="android:layout_height">20dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">2dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+    </style>
+    <style name="heweather_icon">
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_marginRight">5dp</item>
+    </style>
+
+    <style name="heweather_text">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="heweather_date_text">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+    <style name="heweather_date_icon">
+        <item name="android:layout_width">20dp</item>
+        <item name="android:layout_height">20dp</item>
+        <item name="android:layout_marginRight">5dp</item>
+    </style>
+
+    <style name="me_layout">
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:background">@color/white</item>
+        <!--<item name="android:layout_marginBottom">10dp</item>-->
+    </style>
+
+    <style name="me_layout_title">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/text_title_color</item>
+    </style>
+    <style name="user_item" parent="me_layout_title">
+        <item name="android:layout_marginLeft">8dp</item>
+    </style>
+    <style name="me_layout_next">
+        <item name="android:layout_width">15dp</item>
+        <item name="android:layout_height">15dp</item>
+        <item name="android:background">@mipmap/next</item>
+    </style>
+
+    <style name="splitline">
+        <item name="android:background">@color/d_rule</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+    </style>
+
+    <style name="split_group">
+        <item name="android:background">@color/white</item>
+        <item name="android:paddingLeft">30dp</item>
+        <item name="android:paddingRight">30dp</item>
+        <item name="android:paddingTop">10dp</item>
+    </style>
+
+    <style name="bt_yes">
+        <item name="android:background">@drawable/bt_yes_backage</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="bt_save">
+        <item name="android:background">@drawable/bt_save_backage</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="bt_delete">
+        <item name="android:background">@drawable/bt_delete_backage</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="ll_key_value">
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingBottom">11dp</item>
+        <item name="android:paddingTop">11dp</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="handcontrol_tab">
+        <item name="android:background">@drawable/top_table</item>
+        <item name="android:textColor">@color/text_select</item>
+    </style>
+
+    <style name="rv_title">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="rv_child">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/text_title_color</item>
+    </style>
+    <style name="rv_child_hint">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/color_gray_close</item>
+    </style>
+    <style name="rv_child_layout">
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingRight">15dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+    </style>
+    <style name="tx_name">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/text_title_color</item>
+    </style>
+    <style name="tx_value">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/color_gray_close</item>
+    </style>
+</resources>

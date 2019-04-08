@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    style="@style/rv_child_layout"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_marginRight="15dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
+    <View
+        style="@style/main_tab_v_view"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_height="0dp">
+            <TextView
+                android:text="类型:"
+                style="@style/rv_child"
+                android:layout_marginLeft="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/et_style"
+                android:background="@null"
+                style="@style/rv_child"
+                android:gravity="center"
+                android:text="1111"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <View
+            style="@style/main_tab_d_view"/>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_height="0dp">
+            <TextView
+                android:text="别名:"
+                style="@style/rv_child"
+                android:layout_marginLeft="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/et_a"
+                android:background="@null"
+                style="@style/rv_child"
+                android:gravity="center"
+                android:text="1111"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

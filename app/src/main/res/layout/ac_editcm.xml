@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="10dp"
+    android:orientation="vertical">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/ll_key_value">
+
+            <TextView
+                style="@style/me_layout_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="名称:" />
+
+            <EditText
+                android:id="@+id/et_name"
+                style="@style/login_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="请输入控制器名称" />
+        </LinearLayout>
+
+        <View style="@style/main_tab_d_view" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/ll_key_value">
+
+            <TextView
+                style="@style/me_layout_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="场地:" />
+
+            <TextView
+                android:id="@+id/ed_model"
+                style="@style/login_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+
+        <View style="@style/main_tab_d_view" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/ll_key_value">
+
+            <TextView
+                style="@style/me_layout_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="编号:" />
+
+            <EditText
+                android:id="@+id/et_code"
+                style="@style/login_edit"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:hint="请输入编号" />
+            <ImageView
+                android:id="@+id/iv_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/qr_code"/>
+        </LinearLayout>
+
+        <View style="@style/main_tab_d_view" />
+        <Button
+            android:id="@+id/bt_init"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="22dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            style="@style/bt_yes"
+            android:text="初始化"
+            />
+        <View style="@style/main_tab_d_view" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_ls"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        <Button
+            android:id="@+id/bt_save"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="30dp"
+            style="@style/bt_save"
+            android:text="保存"
+     />
+
+    </LinearLayout>
+</ScrollView>
